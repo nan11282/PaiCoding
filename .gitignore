@@ -1,0 +1,62 @@
+# 只上传 api, core, service, ui, web 这几个模块
+# 其他所有文件都忽略
+
+# 忽略根目录的所有文件和目录（除了白名单）
+/*
+!paicoding-api
+!paicoding-core
+!paicoding-service
+!paicoding-ui
+!paicoding-web
+!.gitignore
+
+# 允许这些文件夹的内容
+!paicoding-api/**
+!paicoding-core/**
+!paicoding-service/**
+!paicoding-ui/**
+!paicoding-web/**
+
+# 模块内部的忽略规则
+**/target/
+*.jar
+*.jar.bak
+*.jar.tmp
+*.log
+logs/
+pid.log
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+### .DS_Store
+**/.DS_Store
+
+# 支付证书相关移除
+paicoding-web/src/main/resources/cert
+
+# 本地配置文件（包含 API Key）
+**/application-ai.yml.local
